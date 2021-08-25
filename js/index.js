@@ -26,3 +26,11 @@ INSTRUCTIONS:
 
 // Once you have read the above messages, you can delete all comments. 
 "use strict";
+
+var min=0;
+var max=10;
+
+function checknumber(){
+  var value = document.getElementById("number").value;
+  if (value<min||value>max) return window.alert("Age is not in the range");
+}
