@@ -27,10 +27,22 @@ INSTRUCTIONS:
 // Once you have read the above messages, you can delete all comments. 
 "use strict";
 
-var min=0;
-var max=10;
+var min=document.getElementById("number").min;
+var max=document.getElementById("number").max;
 
 function checknumber(){
   var value = document.getElementById("number").value;
-  if (value<min||value>max) return window.alert("Age is not in the range");
+  if (value<min||value>max) return alert("Age is not in the range");
+}
+
+function validatename(){
+  var name= document.getElementById("name").value;
+  var re = /\S/;
+  if (!re.test(name)) return alert("You must put a valid name");
+}
+function validatemail(){
+  var mail= document.getElementById("email").value;
+  //alert(mail);
+  var re = /\S+@\S+\.\S+/;
+  if (!re.test(mail)) return alert("Wrong email address");
 }
